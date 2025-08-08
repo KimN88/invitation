@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Romantisk Invitation</title>
+<link href="https://fonts.googleapis.com/css2?family=Carlito&family=Great+Vibes&display=swap" rel="stylesheet" />
+<style>
+  body {
+    margin: 0; 
+    background: linear-gradient(to right, #fff0f5, #fefefe);
+    font-family: 'Carlito', sans-serif;
+    color: black;
+  }
+  .container {
+    max-width: 800px;
+    margin: 40px auto 80px;
+    background: white;
+    padding: 30px 40px 40px 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+  }
+  .slide {
+    display: none;
+    animation: fadeIn 1s ease-in-out;
+    text-align: center;
+  }
+  .slide.active {
+    display: block;
+  }
+  h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.8em;
+    margin-bottom: 15px;
+    color: black;
+  }
+  p {
+    font-size: 1.3em;
+    font-style: italic;
+    margin: 0 auto 25px auto;
+    max-width: 700px;
+    color: black;
+    line-height: 1.5;
+  }
+  img {
+    max-width: 100%;
+    border-radius: 12px;
+    margin-bottom: 25px;
+  }
+  /* Slide 2 image */
+  #slide2 img {
+    width: auto;
+    max-height: 500px;
+    aspect-ratio: 1290 / 1415;
+  }
+  /* Slide 3 grid for 11 small images, 4 per row */
+  #slide3 .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-items: center;
+  }
+  #slide3 .grid img {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  /* Slide 5 program spaced out */
+  #slide5 p {
+    white-space: pre-line;
+    font-size: 1.1em;
+    line-height: 2em;
+    max-width: 700px;
+    margin: 0 auto 30px;
+  }
+  /* Buttons */
+  .nav-buttons {
+    text-align: center;
+    margin-top: 30px;
+  }
+  button {
+    font-family: 'Carlito', sans-serif;
+    font-size: 1.1em;
+    padding: 12px 28px;
+    margin: 0 12px;
+    border-radius: 30px;
+    border: none;
+    background-color: #7c1c2a;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #5e141f;
+  }
+  .mute-btn {
+    background: none;
+    color: #7c1c2a;
+    margin-top: 15px;
+    font-size: 1em;
+  }
+  /* Heart frame on last slide */
+  .heart-frame {
+    position: relative;
+    display: inline-block;
+    margin-top: 15px;
+  }
+  .heart-frame::before {
+    content: "❤";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6em;
+    color: rgba(255, 0, 0, 0.2);
+    z-index: 1;
+  }
+  .heart-frame img {
+    position: relative;
+    z-index: 2;
+    border-radius: 12px;
+    max-width: 100%;
+  }
+  /* Fade animation */
+  @keyframes fadeIn {
+    from {opacity: 0; transform: translateY(15px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div id="slides">
+      <!-- Slide 1 -->
+      <div class="slide active" id="slide1">
+        <h2>Vores dejlige familie - vores et og alt</h2>
+        <img src="familie.jpg" alt="Familie billede" />
+      </div>
+      <!-- Slide 2 -->
+      <div class="slide" id="slide2">
+        <p>Vi har den dejligste familie og dejligste drenge, men i dag er vores dag og det skal vi huske at nyde. Det skal vi også 6. december, hvor jeg har arrangeret en romantisk dag for os to helt alene.</p>
+        <img src="mig_og_lau.jpg" alt="Mig og Lau" />
+      </div>
+      <!-- Slide 3 -->
+      <div class="slide" id="slide3">
+        <h2>Vi skal til Hamborg</h2>
+        <p>Vi skal til Hamborg, hvorfra vi allerede har gode minder - og her tænker jeg ikke på den gang Theis ikke måtte komme med flyveren :D</p>
+        <div class="grid">
+          <img src="n1.jpg" alt="billede 1" />
+          <img src="n2.jpg" alt="billede 2" />
+          <img src="n3.jpg" alt="billede 3" />
+          <img src="n4.jpg" alt="billede 4" />
+          <img src="n5.jpg" alt="billede 5" />
+          <img src="n6.jpg" alt="billede 6" />
+          <img src="n7.jpg" alt="billede 7" />
+          <img src="n8.jpg" alt="billede 8" />
+          <img src="n9.jpg" alt="billede 9" />
+          <img src="n10.jpg" alt="billede 10" />
+          <img src="n11.jpg" alt="billede 11" />
+        </div>
+      </div>
+      <!-- Slide 4 -->
+      <div class="slide" id="slide4">
+        <h2>Favoritterne</h2>
+        <p>Vi starter med dine favoritter, julehygge ved rådhuset og julegaveshopping.</p>
+        <img src="julehygge.jpg" alt="Julehygge" />
+      </div>
+      <!-- Slide 6 -->
+      <div class="slide" id="slide6">
+        <h2>En middag for to</h2>
+        <img src="middag.jpg" alt="Middag for to" />
+      </div>
+      <!-- Slide 7 -->
+      <div class="slide" id="slide7">
+        <h2>Sejltur i den gamle by</h2>
+        <img src="sejltur_solnedgang.jpg" alt="Sejltur i solnedgang" />
+      </div>
+      <!-- Slide 9: Elsker dig over alt -->
+      <div class="slide" id="slide9">
+        <h2>Elsker dig over alt</h2>
+        <div class="heart-frame">
+          <img src="elskerdig.jpg" alt="Elsker dig billede" />
+        </div>
+      </div>
+      <!-- Slide 5 (flyttet til sidst) -->
+      <div class="slide" id="slide5">
+        <h2>Program for dagen</h2>
+        <p>
+Start kl. 12:00 - Grand Harbor Cruise kl. 18:00 - Middag ca. 19:45
+
+Dagsprogram
+
+12:00-14:00 Julemarked ved Rådhuset + frokost
+
+14:00-17:00 Shopping & cafépause
+
+17:00-17:30 Gå mod Landungsbrücken og tjek ind til cruise
+
+18:00-19:30 Grand Harbor Cruise
+
+19:45-21:30 Middag på Brook Steakhouse & Bar
+
+21:30-22:30 Afslutning: Glühwein på Santa Pauli julemarked eller et glas vin i Sternschanze
+        </p>
+      </div>
+    </div>
+    <div class="nav-buttons">
+      <button id="prev">← Forrige</button>
+      <button id="next">Næste →</button>
+      <button class="mute-btn" id="mute-btn">Slå lyd fra 🔇</button>
+    </div>
+    <audio id="bg-music" loop>
+      <source src="https://cdn.pixabay.com/download/audio/2023/06/01/audio_70906a0b49.mp3?filename=gentle-piano-145822.mp3" type="audio/mpeg" />
+      Din browser understøtter ikke lyd.
+    </audio>
+  </div>
+
+<script>
+  const slides = document.querySelectorAll(".slide");
+  let currentSlide = 0;
+
+  document.getElementById("next").addEventListener("click", () => {
+    showSlide(currentSlide + 1);
+  });
+
+  document.getElementById("prev").addEventListener("click", () => {
+    showSlide(currentSlide - 1);
+  });
+
+  // Background music control
+  const bgMusic = document.getElementById("bg-music");
+  const muteBtn = document.getElementById("mute-btn");
+  let isMuted = false;
+
+  muteBtn.addEventListener("click", () => {
+    if (isMuted) {
+      bgMusic.play();
+      muteBtn.textContent = "Slå lyd fra 🔇";
+      isMuted = false;
+    } else {
+      bgMusic.pause();
+      muteBtn.textContent = "Slå lyd til 🔊";
+      isMuted = true;
+    }
+  });
+
+  // Autoplay background music on page load (may require user interaction in some browsers)
+  window.addEventListener("load", () => {
+    bgMusic.play().catch(() => {
+      // autoplay might fail, no worries
+    });
+  });
+
+  function showSlide(index) {
+    if (index < 0) index = slides.length - 1;
+    if (index >= slides.length) index = 0;
+
+    currentSlide = index;
+
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === currentSlide);
+    });
+  }
+</script>
+</body>
+</html>
